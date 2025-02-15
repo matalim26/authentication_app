@@ -8,12 +8,7 @@ Use local storage or session storage to manage user sessions.
 Display different content based on the user's authentication status (e.g., a login form vs. a welcome page).
 Integrate with a backend authentication service or use a service like Firebase Authentication for user management.
 
-## Technologies Used
-React.js (with functional components)
-React Hooks (useState, useEffect)
-Firebase Authentication (for user management)
-React Router (for navigation)
-CSS (for styling the UI)
+
 
 ## Technologies Used
 React.js (with functional components)
