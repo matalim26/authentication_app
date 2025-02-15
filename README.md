@@ -1,16 +1,76 @@
-# Getting Started with Create React App
+## Objective
+Develop a React application with user authentication functionality.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
+
+Implement user registration and login forms.
+Use local storage or session storage to manage user sessions.
+Display different content based on the user's authentication status (e.g., a login form vs. a welcome page).
+Integrate with a backend authentication service or use a service like Firebase Authentication for user management.
+
+## Technologies Used
+React.js (with functional components)
+React Hooks (useState, useEffect)
+Firebase Authentication (for user management)
+React Router (for navigation)
+CSS (for styling the UI)
+
+## Technologies Used
+React.js (with functional components)
+React Hooks (useState, useEffect)
+Firebase Authentication (for user management)
+React Router (for navigation)
+CSS (for styling the UI)
 
 ## Available Scripts
-
 In the project directory, you can run:
 
-### `npm start`
+## Installation and Setup
+ ## Clone the Repository:
+git clone https://github.com/your-repo/user-auth-system.git
+cd user-auth-system
 
+## Install Dependencies:
+npm install
+
+## Folder Structure
+user-auth-system/
+│-- src/
+│   │-- components/
+│   │   │-- Login.js
+│   │   │-- Register.js
+│   │   │-- Home.js
+│   │-- firebase.js
+│   │-- App.js
+│   │-- index.js
+│-- public/
+│-- package.json
+│-- README.md
+
+## Set Up Firebase:
+Create a Firebase project at Firebase Console.
+Enable Authentication (Email/Password sign-in method).
+Get the Firebase config and update firebase.js:
+
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID",
+};
+
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+
+## Run the Application:
+`npm start`
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
@@ -30,6 +90,12 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run eject`
+
+## Usage
+Register a new user using an email and password.
+Login with registered credentials.
+Logout to clear the session.
+Session Management using Firebase Authentication and React state.
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
